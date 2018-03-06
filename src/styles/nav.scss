@@ -1,0 +1,29 @@
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 50px;
+  width: 100%;
+  line-height: 50px;  
+  background-color: #f6f6f6;
+  z-index: 1;
+  text-align: center;
+
+  .nav-item {
+    margin: 5%;
+    text-decoration: none;
+    color:#80bd01;
+    
+    &:not(.current):hover {
+      color: #005580
+    }
+  }
+
+  .current {
+    background-color: #80bd01;
+    color: #fff;
+    padding: 3px 4px;
+    border-radius: 3px;
+  }
+}
+

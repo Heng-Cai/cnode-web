@@ -1,0 +1,85 @@
+.user {
+
+  .user-info {
+
+    .user-name {
+
+      .avatar {
+        width: 40px;
+        height: 40px;
+      }
+
+      .user-loginname {
+        margin-left: 10px;
+        color: #666;
+        font-weight: 700;
+        position: relative;
+        bottom: 15px;          
+      }
+    }
+
+    .user-score {
+      padding: 10px 0 5px 0;
+    }
+
+    .user-github {
+      padding: 5px 0;
+
+      a {
+        text-decoration: none;
+      }
+    }
+
+    .user-regtime {
+      padding: 5px 0;
+    }
+  }
+
+  .recent-replies-title {
+    background-color: #f6f6f6; 
+    padding: 10px 0;
+    margin: 10px 0;
+  }
+
+  .topic-list {
+
+    .topic-item {
+      position: relative;
+      height: 50px;
+      border-bottom: 1px solid #f0f0f0;
+
+      .user-link {
+        margin-right: 15px;
+
+        .avatar {
+          width: 30px;
+          height: 30px;
+          padding-top: 10px;
+          padding-bottom: 10px;
+        }
+      }
+
+      .topic-last-reply {
+        position: absolute;
+        bottom: 5px;
+        right: 0;
+        font-size: 10px;
+      }
+
+      .topic-title-link {
+        overflow: hidden;
+        position: absolute;
+        top: 5px;
+        left: 50px;
+        max-width: 70%;
+        text-decoration: none;
+        color: #333;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+      }
+      &:visited {
+        color: #888;
+      }
+    }
+  }
+}
