@@ -546,12 +546,12 @@ API路径前缀：**https://cnodejs.org/api/v1**
 
 - 主题列表页
 
-![主题列表页](.\preview\主题列表页.gif)
+![主题列表页](https://raw.githubusercontent.com/Heng-Cai/cnode-web/master/preview/%E4%B8%BB%E9%A2%98%E5%88%97%E8%A1%A8%E9%A1%B5.gif)
 
 - 主题详情页
 
-![主题详情页](.\preview\主题详情页.gif)
+![主题详情页](https://raw.githubusercontent.com/Heng-Cai/cnode-web/master/preview/%E4%B8%BB%E9%A2%98%E8%AF%A6%E6%83%85%E9%A1%B5.gif)
 
 - 用户详情页
 
-![用户详情页](.\preview\用户详情页.gif)
+![用户详情页](https://raw.githubusercontent.com/Heng-Cai/cnode-web/master/preview/%E7%94%A8%E6%88%B7%E8%AF%A6%E6%83%85%E9%A1%B5.gif)
