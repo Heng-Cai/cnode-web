@@ -1,4 +1,4 @@
-# 从零开始构建使用 TypeScript 与 Webpack 的 React 应用
+# TypeScript + Webpack 搭建 React 应用模板
 
 ## 初始化应用
 
@@ -9,7 +9,7 @@
 - [入门Webpack](https://www.jianshu.com/p/42e11515c10f)
 - [Webpack’s HMR](https://medium.com/@rajaraodv/webpacks-hmr-react-hot-loader-the-missing-manual-232336dc0d96)
 
-1、创建应用根目录
+### 创建应用根目录
 
 ```shell
 mkdir react-app
@@ -22,7 +22,7 @@ cd react-app
 - `src/`
 - `dist/`
 
-2、在根目录 `react-app/` 下初始化应用
+### 在根目录下初始化应用
 
 ```shell
 npm init
@@ -40,7 +40,7 @@ npm init
 >
 > ​	README.md
 
-3、在根目录 `react-app/` 下安装依赖
+### 在根目录下安装依赖
 
 安装 React、React-DOM 并记录到 `package.json` 的 `"dependencies"` (`--save`)
 
@@ -78,7 +78,7 @@ npm install --save-dev webpack typescript awesome-typescript-loader source-map-l
 >
 > [source-map-loader](https://www.npmjs.com/package/source-map-loader) uses any sourcemap outputs from TypeScript to inform webpack when generating *its own* sourcemaps. This will allow you to debug your final output file as if you were debugging your original TypeScript source code
 
-4、在根目录 `react-app/` 下添加并配置 `tsconfig.json` 
+### 在根目录下添加并配置 `tsconfig.json` 
 
 详见：[tsconfig.json](http://www.typescriptlang.org/docs/handbook/tsconfig-json.html)
 
@@ -98,17 +98,15 @@ npm install --save-dev webpack typescript awesome-typescript-loader source-map-l
 }
 ```
 
-5、在根目录 `react-app/` 下添加并配置 `webpack.config.js` 
+### 在根目录下添加并配置 `webpack.config.js` 
 
-6、配置本地服务器 `webpack-dev-server`
-
-6.1、安装依赖
+1、安装webpack本地服务器
 
 ```shell
 npm install --save-dev webpack-dev-server
 ```
 
-6.2、定义 webpack 的入口与出口
+2、定义 webpack 的入口与出口
 
 ```javascript
 entry: "./src/index.tsx", // 定义入口，webpack 根据此入口找出应用的依赖
@@ -118,7 +116,7 @@ output: {  // 定义出口，存放 webpack “处理”后的文件
 }
 ```
 
-6.3、配置热更新
+3、配置热更新
 
 - 方式一：CLI
 
@@ -169,7 +167,7 @@ plugins: [
 ]
 ```
 
-6.4、定义 `npm run build`
+4、定义 `npm run build`
 
 ```json
 // package.json
@@ -187,7 +185,7 @@ plugins: [
 
 > 在根目录 `react-app/` 下执行 `npm run build` 后，webpack “处理”完成后，会在定义的出口位置 `/dist` 生成：`bundle.js` 以及 `bundle.js.map`，再在此文件夹中手动添加一个 `index.html` 并在浏览器中打开，即可显示页面
 
-6.5、自动生成服务器根目录的 `index.html` (HtmlWebpackPlugin 插件)
+5、自动生成服务器根目录的 `index.html` (HtmlWebpackPlugin 插件)
 
 - 在根目录 `react-app/` 下安装插件
 
@@ -253,7 +251,7 @@ plugins: [
 - [Webpack 2 handling Sass](https://www.constructcode.com/post/webpack-2-handling-sass)
 - [An error with extract-text-webpack-plugin](https://github.com/webpack-contrib/extract-text-webpack-plugin/issues/569)
 
-1、在根目录 `react-app/` 下安装依赖
+### 在根目录下安装依赖
 
 - node-sass (sass-loader 依赖 node-sass)
 - sass-loader
@@ -264,7 +262,7 @@ plugins: [
 npm install --save-dev node-sass style-loader sass-loader css-loader
 ```
 
-2、配置 `webpack.config.js`
+### 配置 `webpack.config.js`
 
 ```javascript
 module: {
@@ -288,7 +286,7 @@ module: {
 
 > 此时在配置有热更新的前提下，修改 .sass 源码，页面可以实现无刷新更新样式 (修改 .tsx 源码则是实现页面有刷新更新)
 
-3、分离 css 与 js
+### 分离 css 与 js
 
 在根目录 `react-app/` 下安装插件
 
@@ -367,7 +365,7 @@ plugins: [
 
 - [TypeScript-React-Starter](https://github.com/Microsoft/TypeScript-React-Starter#typescript-react-starter)
 
-1、在根目录 `react-app/` 下安装插件
+### 在根目录下安装插件
 
 ```shell
 npm install --save redux react-redux @types/react-redux
@@ -375,7 +373,7 @@ npm install --save redux react-redux @types/react-redux
 
 > In this case we didn't need to install `@types/redux` because Redux already comes with its own definition files (`.d.ts` files)
 
-2、设置 shape of state 
+### 设置 shape of state 
 
 ```javascript
 // src/types/index.tsx
@@ -386,7 +384,7 @@ export interface StoreState {
 }
 ```
 
-3、定义 action
+### 定义 action
 
 ```javascript
 // 定义 action 常量
@@ -429,7 +427,7 @@ export function decrementEnthusiasm(): DecrementEnthusiasm {
 }
 ```
 
-4、定义 Reducer
+### 定义 Reducer
 
 ```javascript
 // 定义 reducer 函数
@@ -450,7 +448,7 @@ export function enthusiasm(state: StoreState, action: EnthusiasmAction): StoreSt
 }
 ```
 
-5、生成 container
+### 生成 container
 
 **Components** are often data-agnostic (与数据无关), and work mostly at a presentational level
 
@@ -481,7 +479,7 @@ export function mapDispatchToProps(dispatch: Dispatch<actions.EnthusiasmAction>)
 export default connect(mapStateToProps, mapDispatchToProps)(Hello);
 ```
 
-6、创建 store
+### 创建 store
 
 ```javascript
 // src/index.tsx
@@ -510,7 +508,29 @@ ReactDOM.render(
 );
 ```
 
-# TypeScript + React搭建cnode
+# 应用模板搭建 cnode-web 端
+
+## API分析
+
+详见 [cnode API](https://cnodejs.org/api)
+
+API路径前缀：**https://cnodejs.org/api/v1**
+
+### 主题 (get)
+
+#### /topics 主题列表
+
+接收 get 参数
+
+- page `Number` 页数
+- tab `String` 主题分类。目前有 `ask` `share` `job` `good`
+- limit `Number` 每一页的主题数量
+
+#### /topic/:id 主题详情
+
+### 用户 (get)
+
+#### /user/:loginname 用户详情
 
 ## Debug
 
@@ -520,7 +540,18 @@ ReactDOM.render(
 
 解决办法：下载 [DefinitelyTyped](https://github.com/DefinitelyTyped/DefinitelyTyped)中的所有 types，从中找到相应的 `@types/some-module`，替换项目的 `node_module/@types` 文件下的相应模块
 
-[API](https://cnodejs.org/api)
+## Web 页面介绍
 
+主要分为三个页面，都是根据相应的 API 接口进行 http 的 GET 请求，得到响应的数据后，再渲染出页面
 
+- 主题列表页
 
+![主题列表页](.\preview\主题列表页.gif)
+
+- 主题详情页
+
+![主题详情页](.\preview\主题详情页.gif)
+
+- 用户详情页
+
+![用户详情页](.\preview\用户详情页.gif)

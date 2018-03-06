@@ -1,9 +1,9 @@
-import * as actionTypes from "../constants/actionTypes";
-import * as constValues from "../constants/constValues";
+import * as actionTypes from '../constants/actionTypes';
+import * as constValues from '../constants/constValues';
 
-import { fetch } from "../utils/fetch";
+import { fetch } from '../utils/fetch';
 
-import { IUserInfo } from "../interfaces/user";
+import { IUserInfo } from '../interfaces/user';
 
 function requestUserInfo(userId: string) {
   return {
@@ -19,6 +19,7 @@ function receiveUserInfo(user: IUserInfo) {
   }
 }
 
+// 请求用户详情
 export function fetchUserInfo(userId: string) {
   return dispatch => {
     dispatch(requestUserInfo(userId));

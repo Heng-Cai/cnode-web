@@ -1,7 +1,7 @@
 import { combineReducers } from 'redux';
 
-import { topics, topic } from "./topic";
-import { user } from "./user";
+import { topics, topic } from './topic';
+import { user } from './user';
 
 const rootReducer = combineReducers({
   topics,

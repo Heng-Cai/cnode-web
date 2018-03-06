@@ -9,7 +9,7 @@ class Nav extends React.Component<{ current: string }, { current: number }> {
   constructor(props) {
     super(props);
 
-    // 设置当前 tab
+    // 根据传入 props 设置当前 tab
     this.state = {
       current: TAGS.filter(tag => tag.isTab).map(tab => {
         return tab.name;

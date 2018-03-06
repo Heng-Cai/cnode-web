@@ -1,7 +1,7 @@
-import * as React from "react";
-import { Link } from "react-router";
+import * as React from 'react';
+import { Link } from 'react-router';
 
-import { ITopicComment } from "../../interfaces/comment";
+import { ITopicComment } from '../../interfaces/comment';
 
 import getDate from '../../utils/getDate';
 

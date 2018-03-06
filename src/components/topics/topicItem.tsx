@@ -32,7 +32,7 @@ class TopicItem extends React.Component<{ topic: ITopicItem }, any> {
         </span>
         <span className="topic-last-reply">{getDate(topic.last_reply_at)}</span>
 
-        {/* 点击其他地方，进入主题详情页 */}
+        {/* 点击标题，进入主题详情页 */}
         <span className={`topic-tag ${tag && tag.name}`}>
           {tag && tag.text}
         </span>

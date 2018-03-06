@@ -1,4 +1,4 @@
-import { ITopicComment } from "./comment";
+import { ITopicComment } from './comment';
 
 export interface ITopicItem {
   // 作者

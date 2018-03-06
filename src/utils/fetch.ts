@@ -1,14 +1,10 @@
-import * as constValues from "../constants/constValues";
-import * as qs from "querystring";
+import * as constValues from '../constants/constValues';
+import * as qs from 'querystring';
 
 import axios from 'axios';
 
 let axiosInstance = axios.create({
   baseURL: 'https://cnodejs.org',
-  // headers: {
-  //   'Origin': 'https://cnodejs.org',
-  //   'Access-Control-Request-Method': 'GET',
-  // },
 });
 
 export function fetch(url: string, opts?: { params?: any, query?: any }) {

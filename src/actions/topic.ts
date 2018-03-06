@@ -45,7 +45,7 @@ function receiveTopic(topic: ITopicItem) {
   }
 }
 
-// 请求单个 topic
+// 请求 topic 详情
 export function fetchTopic(topicId: string) {
   return dispatch => {
     dispatch(requestTopic(topicId));

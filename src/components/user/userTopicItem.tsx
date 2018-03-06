@@ -11,7 +11,6 @@ class UserTopicItem extends React.Component<{ topic: ITopic }, any> {
 
     return (
       <div className="topic-item">
-        {/* 点击头像，进入用户详情页 */}
         <Link to={`/user/${topic.author.loginname}`} className="user-link">
           <img
             src={topic.author.avatar_url}
@@ -21,8 +20,6 @@ class UserTopicItem extends React.Component<{ topic: ITopic }, any> {
           />
         </Link>
         <span className="topic-last-reply">{getDate(topic.last_reply_at)}</span>
-
-        {/* 点击其他地方，进入主题详情页 */}
         <Link className="topic-title-link" to={`/topic/${topic.id}`}>
           {topic.title}
         </Link>
